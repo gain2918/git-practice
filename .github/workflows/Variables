@@ -1,0 +1,9 @@
+Name: Variables
+on: workflow_dispatch
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    env:
+      USERNAME: ${{vars.UERSNAME}}
+    steps:
+      - run: echo "$USERNAME"
